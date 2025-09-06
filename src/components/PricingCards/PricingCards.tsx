@@ -75,7 +75,7 @@ export const PricingCards = ({ className = '' }: ExtendedPricingCardsProps) => {
   return (
     <motion.section 
       ref={ref}
-      className={`py-16 px-4 bg-gradient-to-b from-gray-50 to-white ${className}`}
+      className={`py-16 px-4 bg-gradient-to-b from-gray-50 mx-10 to-white ${className}`}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
@@ -96,7 +96,7 @@ export const PricingCards = ({ className = '' }: ExtendedPricingCardsProps) => {
 
         {/* Pricing Cards */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
           variants={containerVariants}
         >
           {pricingPlans.map((plan) => (
