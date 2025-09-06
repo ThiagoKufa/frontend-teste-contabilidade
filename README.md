@@ -1,69 +1,123 @@
-# React + TypeScript + Vite
+# Frontend Teste Contabilidade
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação React moderna para apresentação de serviços contábeis, desenvolvida com Vite, TypeScript e Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** - Biblioteca para construção de interfaces
+- **TypeScript** - Superset do JavaScript com tipagem estática
+- **Vite** - Build tool e dev server ultra-rápido
+- **Tailwind CSS** - Framework CSS utilitário
+- **Framer Motion** - Biblioteca para animações
+- **ESLint** - Linter para qualidade de código
 
-## Expanding the ESLint configuration
+## 📋 Pré-requisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Antes de começar, certifique-se de ter instalado:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Node.js** (versão 18 ou superior)
+- **npm** (geralmente vem com o Node.js)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🔧 Instalação
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Clone o repositório
+```bash
+git clone <url-do-repositorio>
+cd frontend-teste-contabilidade
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2. Instale as dependências
+```bash
+npm install
 ```
+
+## 🚀 Como executar o projeto
+
+### Modo de desenvolvimento
+```bash
+npm run dev
+```
+
+O projeto será executado em: `https://localhost:5176/`
+
+> **Nota:** O projeto usa HTTPS por padrão com certificado SSL local.
+
+### Build para produção
+```bash
+npm run build
+```
+
+### Preview da build de produção
+```bash
+npm run preview
+```
+
+### Linting do código
+```bash
+npm run lint
+```
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── components/           # Componentes React reutilizáveis
+│   ├── PricingCards/    # Componente de cards de preços (modular)
+│   │   ├── PricingCards.tsx
+│   │   ├── PricingCard.tsx
+│   │   ├── VideoButton.tsx
+│   │   ├── types.ts
+│   │   ├── data.ts
+│   │   └── index.ts
+│   ├── HeroSection.tsx  # Seção principal da página
+│   ├── Table.tsx        # Tabela de benefícios
+│   ├── Title.tsx        # Componente de título reutilizável
+│   └── index.ts         # Barrel exports
+├── hooks/               # Custom hooks
+│   └── useLocation.ts   # Hook para geolocalização
+├── services/            # Serviços e APIs
+│   └── LocationService.ts
+├── types/               # Definições de tipos TypeScript
+│   └── index.ts
+├── App.tsx              # Componente principal
+├── main.tsx             # Ponto de entrada da aplicação
+└── index.css            # Estilos globais
+```
+
+## 🎨 Funcionalidades
+
+- **Seção Hero** com detecção automática de localização
+- **Tabela de benefícios** comparativa
+- **Cards de preços** com animações suaves
+- **Design responsivo** e moderno
+- **Animações** com Framer Motion
+- **Tipagem completa** com TypeScript
+
+## 🔧 Configurações
+
+### Vite
+O projeto usa Vite com as seguintes configurações:
+- Plugin React para JSX
+- Plugin Tailwind CSS
+- Plugin mkcert para HTTPS local
+
+### TypeScript
+Configuração estrita habilitada com:
+- `noUnusedLocals`
+- `noUnusedParameters`
+- `strict: true`
+
+### ESLint
+Regras configuradas para:
+- React Hooks
+- React Refresh
+- TypeScript
+
+## 🌐 Fontes
+
+O projeto utiliza a fonte **Inter** e **Poppins** importada via Google Fonts no `index.html`.
+
+## 📱 Responsividade
+
+O projeto é otimizado para diferentes tamanhos de tela usando Tailwind CSS com breakpoints responsivos.
+
