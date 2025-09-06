@@ -6,7 +6,7 @@ export const PricingCard = ({ plan, cardVariants }: PricingCardProps) => {
     <motion.div
       key={plan.id}
       className={`
-        relative bg-white rounded-2xl shadow-lg border group flex flex-col
+        relative bg-white rounded-2xl shadow-lg border group flex flex-col flex-1  min-w-85 max-w-95
         ${plan.isPopular ? 'border-primary' : 'border-gray-200'}
       `}
       variants={cardVariants}
