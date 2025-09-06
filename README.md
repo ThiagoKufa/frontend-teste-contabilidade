@@ -38,7 +38,7 @@ npm install
 npm run dev
 ```
 
-O projeto será executado em: `https://localhost:5176/`
+O projeto será executado em: `https://github.com/ThiagoKufa/frontend-teste-contabilidade.git`
 
 > **Nota:** O projeto usa HTTPS por padrão com certificado SSL local.
 
