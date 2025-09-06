@@ -22,7 +22,7 @@ Antes de começar, certifique-se de ter instalado:
 
 ### 1. Clone o repositório
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/ThiagoKufa/frontend-teste-contabilidade.git
 cd frontend-teste-contabilidade
 ```
 
