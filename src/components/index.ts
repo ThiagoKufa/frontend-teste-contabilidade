@@ -4,3 +4,4 @@
 export { Title, PrimaryTitle, SecondaryTitle, SmallTitle, MediumTitle, LargeTitle } from './Title';
 export { HeroSection } from './HeroSection';
 export { Skeleton, TextSkeleton, TitleSkeleton, BlockSkeleton } from './Skeleton';
+export { PricingCards } from './PricingCards';
