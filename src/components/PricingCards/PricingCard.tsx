@@ -22,7 +22,7 @@ export const PricingCard = ({ plan, cardVariants }: PricingCardProps) => {
       {/* Popular Badge */}
       {plan.isPopular && (
         <motion.div 
-          className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10"
+          className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
